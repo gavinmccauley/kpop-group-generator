@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <style>
     .center {
@@ -9,6 +10,9 @@
         width: auto;
         color: floralwhite;
     }
+    div.searchBox {
+        visibility: hidden;
+    }
 </style>
 <body style="background-image: url('https://cdn.wallpapersafari.com/88/75/cLUQqJ.jpg'); background-attachment: fixed; background-position: center;">
     <main class="center">
@@ -16,6 +20,11 @@
         <button onclick="generateGirlGroup();">generate a random girl group</button>
         <button onclick="generateBoyGroup();">generate a random boy group</button>
         <p id="group">kpop group</p>
+        <div>
+            <script async src="https://cse.google.com/cse.js?cx=8fd385f0d727a31fd"></script>
+            <div class="gcse-searchbox" class="searchBox"></div>
+            <div class="gcse-searchresults-only" data-disableWebSearch="true"></div>
+        </div>
     </main>
 <script type="text/javascript">
     function generateGirlGroup() {
@@ -24,6 +33,8 @@
         let randomGirlNumber = Math.floor(Math.random() * (17 - 0) + 0);
         let girlGroupString = girlGroups[randomGirlNumber];
         document.getElementById("group").innerHTML = girlGroupString;
+        document.querySelector("[title='search']").value = girlGroupString;
+        document.querySelector("[class='gsc-search-button gsc-search-button-v2']").click();
     }
     function generateBoyGroup() {
         const boyGroups = ["ATEEZ", "TOMORROW X TOGETHER", "Big Bang", "BTS", "MONSTA X", "EXO", "GOT7", "iKON", "NCT", "SHINee", "THE BOYZ", "Stray Kids", "ONEUS"];
@@ -31,6 +42,8 @@
         let randomBoyNumber = Math.floor(Math.random() * (12 - 0) + 0);
         let boyGroupString = boyGroups[randomBoyNumber];
         document.getElementById("group").innerHTML = boyGroupString;
+        document.querySelector("[title='search']").value = boyGroupString;
+        document.querySelector("[class='gsc-search-button gsc-search-button-v2']").click();
     }
 </script>
 </body>
