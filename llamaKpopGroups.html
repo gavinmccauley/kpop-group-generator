@@ -1,0 +1,36 @@
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+    .center {
+        margin: auto;
+        text-align: center;
+        padding: 2%;
+        font-family: Arial, Helvetica, sans-serif;
+        background-color: rgba(39, 147, 173, 0.5);
+        width: auto;
+        color: floralwhite;
+    }
+</style>
+<body style="background-image: url('https://cdn.wallpapersafari.com/88/75/cLUQqJ.jpg');">
+    <main class="center">
+        <p>(>^_^)> ~ let me select a kpop group for you to listen to ~ <(^_^<)</p>
+        <button onclick="generateGirlGroup();">generate a random girl group</button>
+        <button onclick="generateBoyGroup();">generate a random boy group</button>
+        <p id="group">kpop group</p>
+    </main>
+<script type="text/javascript">
+    function generateGirlGroup() {
+        const girlGroups = ["aespa", "Apink", "Blackpink", "Dreamcatcher", "Girl's Generation", "EVERGLOW", "fromis_9", "f(x)", "(G)I-DLE", "ITZY", "IZ*ONE", "LOONA", "Mamamoo", "OH MY GIRL", "Red Velvet", "STAYC", "TWICE", "WEEEKLY"];
+        girlGroups.sort(function(a, b){return 0.5 - Math.random()});
+        let randomGirlNumber = Math.floor(Math.random() * (17 - 0) + 0);
+        let girlGroupString = girlGroups[randomGirlNumber];
+        document.getElementById("group").innerHTML = girlGroupString;
+    }
+    function generateBoyGroup() {
+        const boyGroups = ["ATEEZ", "TOMORROW X TOGETHER", "Big Bang", "BTS", "MONSTA X", "EXO", "GOT7", "iKON", "NCT", "SHINee", "THE BOYZ", "Stray Kids", "ONEUS"];
+        boyGroups.sort(function(a, b){return 0.5 - Math.random()});
+        let randomBoyNumber = Math.floor(Math.random() * (12 - 0) + 0);
+        let boyGroupString = boyGroups[randomBoyNumber];
+        document.getElementById("group").innerHTML = boyGroupString;
+    }
+</script>
+</body>
