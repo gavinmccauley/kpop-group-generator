@@ -13,12 +13,24 @@
     div.searchBox {
         visibility: hidden;
     }
+    .button {
+        border: none;
+        border-radius: 4px;
+        background-color: #0099ff;
+        color: white;
+        padding: 1%;
+        transition-duration: 400ms;
+    }
+    .button:hover {
+        background-color: white;
+        color: #0099ff;
+    }
 </style>
 <body style="background-image: url('https://cdn.wallpapersafari.com/88/75/cLUQqJ.jpg'); background-attachment: fixed; background-position: center;">
     <main class="center">
         <p>(>^_^)> ~ let me select a kpop group for you to listen to ~ <(^_^<)</p>
-        <button onclick="generateGirlGroup();">generate a random girl group</button>
-        <button onclick="generateBoyGroup();">generate a random boy group</button>
+        <button onclick="generateGirlGroup();" class="button">generate a random girl group</button>
+        <button onclick="generateBoyGroup();" class="button">generate a random boy group</button>
         <p id="group">kpop group</p>
         <div>
             <script async src="https://cse.google.com/cse.js?cx=8fd385f0d727a31fd"></script>
